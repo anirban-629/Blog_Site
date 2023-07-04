@@ -9,3 +9,8 @@
 1. npx create-react-app frontend
 
 1. npm i express-async-handler
+
+### To install node modules
+
+1. npm i concurrently
+1. npm run installmodules

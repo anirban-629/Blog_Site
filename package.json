@@ -7,7 +7,8 @@
   "scripts": {
     "frontend": "cd frontend && npm start",
     "backend": "cd backend && nodemon index.js",
-    "start": "concurrently \"npm run frontend\" \"npm run backend\""
+    "start": "concurrently \"npm run frontend\" \"npm run backend\"",
+    "installmodules": "concurrently \"npm i\" \"cd frontend && npm i\""
   },
   "author": "Anirban Mishra",
   "license": "ISC",
