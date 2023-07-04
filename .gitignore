@@ -1,0 +1,30 @@
+# Node.js / npm
+node_modules
+npm-debug.log
+
+# Build output
+build/
+dist/
+
+# Editor-specific
+.vscode/
+.idea/
+
+# Environment variables
+.env
+
+# Log files
+*.log
+
+# Compiled binary files
+*.exe
+*.dll
+*.so
+*.dylib
+
+# macOS specific
+.DS_Store
+
+# Cache and temp files
+.cache/
+*.tmp
