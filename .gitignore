@@ -11,7 +11,7 @@ dist/
 .idea/
 
 # Environment variables
-.env
+# .env
 
 # Log files
 *.log
