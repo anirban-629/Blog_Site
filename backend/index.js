@@ -15,7 +15,6 @@ const PORT = process.env.PORT || 5000;
 app.use(express.json());
 app.use("/api/blogs", blogRoutes);
 
-
 app.get("/", (req, res) => {
   res.json({ msg: "success" });
 });
