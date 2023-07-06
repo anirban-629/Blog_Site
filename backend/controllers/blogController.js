@@ -29,4 +29,38 @@ const getAllBlogs = async (req, res) => {
   }
 };
 
-export { createBlog, getAllBlogs };
+// @desc    Update a blog
+// @route   PUT /api/blogs/:id
+// @access  PUBLIC
+const updateBlog = async (req, res) => {
+  try {
+    const blog = await Blog.findById(req.params.id);
+    if (blog) {
+      blog.title = req.body.title || blog.title;
+      blog.content = req.body.content || blog.content;
+      blog.author = req.body.author || blog.author;
+
+      const updatedBlog = await blog.save();
+      res.status(200).send(updatedBlog);
+    }
+  } catch (error) {
+    throw new Error("Blog not found");
+  }
+};
+
+// @desc    Delete a blog
+// @route   DELETE /api/blogs/:id
+// @access  PUBLIC
+const deleteBlog = async (req, res) => {
+  try {
+    const blog = await Blog.findById(req.params.id);
+    if (blog) {
+      await blog.deleteOne();
+      res.status(200).json({ message: "Blog deleted successfully" });
+    }
+  } catch (error) {
+    throw new Error("Blog not found");
+  }
+};
+
+export { createBlog, getAllBlogs, updateBlog, deleteBlog };
