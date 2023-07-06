@@ -10,6 +10,14 @@ const blogSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    like: {
+      type: Number,
+      default: 0,
+    },
+    dislike: {
+      type: Number,
+      default: 0,
+    },
     author: {
       type: String,
       required: true,

@@ -14,6 +14,7 @@ const PORT = process.env.PORT || 5000;
 
 // Works like middleware app.use()
 app.use(express.json());
+
 app.use("/api/blogs", blogRoutes);
 app.use("/api/users", userRoutes);
 

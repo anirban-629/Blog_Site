@@ -39,6 +39,8 @@ const updateBlog = async (req, res) => {
       blog.title = req.body.title || blog.title;
       blog.content = req.body.content || blog.content;
       blog.author = req.body.author || blog.author;
+      blog.like = req.body.like || blog.like;
+      blog.dislike = req.body.dislike || blog.dislike;
 
       const updatedBlog = await blog.save();
       res.status(200).send(updatedBlog);
