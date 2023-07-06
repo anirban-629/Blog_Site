@@ -19,12 +19,10 @@ const createBlog = async (req, res) => {
 const getAllBlogs = async (req, res) => {
   try {
     const blogs = await Blog.find({});
-    if (blogs) {
-      if (blogs.length > 0) {
-        res.send(blogs);
-      } else {
-        throw new Error("No Blogs found");
-      }
+    if (blogs.length > 0) {
+      res.send(blogs);
+    } else {
+      throw new Error("No Blogs found");
     }
   } catch (error) {
     throw new Error("Some Error Occurred");
